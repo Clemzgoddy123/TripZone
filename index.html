@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" 
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-image: url(images/camp3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        opacity: 2.0;
+    }
+    ul li:hover{
+        background-color: rgb(37, 189, 189);
+        
+        border-radius: 10px;
+    }
+   
+    @media (max-width:400px){
+
+    } 
+</style>
+<body>
+
+</div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Trip Zone</a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+              <div class="col-sm-4 mx-5">
+                <input type="search" class="w-80 align-center rounded border" placeholder="Search....">
+                <button class="search rounded bg-info border text-light" type="reset" style="font-size: 15px;">Search Here</button>
+              </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link border border-light rounded" id="form-Button">Booking</a>
+                    </li>
+                    <li class="nav-item border border-light rounded">
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tourist Centers
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#" id="sacred-button">Osogbo Sarcred Grove</a></li>
+                              <li><a class="dropdown-item" href="#" id="dam-button">Kainji National park</a></li>
+                              <li><a class="dropdown-item" href="#" id="tankari-button">Tankari Game Reserve</a></li>
+                              <li><a class="dropdown-item" href="#" id="national-button">National Museum</a></li>
+                              <li><a class="dropdown-item" href="#" id="olumo-button">Olumo Rock</a></li>
+                              <li><a class="dropdown-item" href="#" id="obudu-button">Obudu Plateau</a></li>
+                              <li><a class="dropdown-item" href="#" id="Tourist-button">Benin City National Museum</a></li>
+                              <li><a class="dropdown-item" href="#" id="owu-button">Owu waterfalls</a></li>
+                              <li><a class="dropdown-item" href="#" id="erin-button">Erin Ijesha Waterfalls</a></li>
+                              <li><a class="dropdown-item" href="#" id="awhum-button">Awhum Cave</a></li>
+                              <li><a class="dropdown-item" href="#" id="ikogosi-button">Ikogosi Warm Springs</a></li>
+                              <li><a class="dropdown-item" href="#" id="tarkwa-button">Tarkwa Bay Beach</a></li>
+                              <li><a class="dropdown-item" href="#" id="bar-button">Bar Beach</a></li>
+                              <li><a class="dropdown-item" href="#" id="calabar-button">Calabar Slave Park</a></li>
+                              <li><a class="dropdown-item" href="#" id="gurara-button">Gurara Waterfalls</a></li>
+                              <li><a class="dropdown-item" href="#" id="ikyogen-button">Ikyogen Cave</a></li>
+                              
+                            </ul>
+                          </div>
+                    </li>
+                    <li class="nav-item border border-light rounded">
+                        <a href="try.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form class="border mx-5" style="display:none; position: fixed;" id="form-menu">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll get back you as soon as possible.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputFullname" class="form-label">Fullname</label>
+          <input type="text" class="form-control" id="exampleInputFullname">
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-control">Tourist Center/places</label>
+       <select name="subject" id="subject" class="form-contorl">
+    <option value="destination">Osogbo Sarcred Grove</option>
+    <option value="destination">Kainji National park</option>
+    <option value="destination">Tankari Game Reserve</option>
+    <option value="destination">National Museum</option>
+    <option value="destination">Olumo Rock</option>
+    <option value="destination">Obudu Plateau</option>
+    <option value="destination">Benin City National Museum</option>
+    <option value="destination">Owu waterfalls</option>
+    <option value="destination">Erin Ijesha Waterfalls</option>
+    <option value="destination">Awhum Cave</option>
+    <option value="destination">Ikogosi Warm Springs</option>
+    <option value="destination">Tarkwa Bay Beach</option>
+    <option value="destination">Bar Beach</option>
+    <option value="destination">Calabar Slave Park</option>
+    <option value="destination">Gurara Water  falls</option>
+    <option value="destination">Ikyogen Cave</option>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    <div class="container-md">
+        <div style="display: none;" id="benin-menu">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/benin1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/benin2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/benin3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/benin4.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Benin City National Museum</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Benin city Edo state</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/benin4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/benin5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/benin1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    <div class="container-md">
+        <div style="display: none;" id="ikyogen-menu">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/ikyogen1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/ikyogen2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/ikyogen3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/ikyogen3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Ikyogen Cave</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Gwer East Benue state</p>
+              
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/ikyogen4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/ikyogen5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/ikyogen1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="dam-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/kainji1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/kainji2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/kainji3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/kainji3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Kainji National park</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: New Bussa Niger state</p>
+
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/kainji4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/kainji5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/kainji1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    
+
+    <div class="container-md">
+        <div id="obudu-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/obudo1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/obudo2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/obudu3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/obudu3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Ikyogen Cave</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Gwer East Benue state</p>
+               
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/obudo4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/obudo5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/obudo1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    
+
+   
+    <div class="container-md">
+        <div id="olumo-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/olumo Rock1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/olumo Rock2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/olumo Rock3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/olumo Rock3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Olumo Rock</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Abekuta, Ogun state</p>
+               
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/olumo Rock4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/olumo Rock2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/olumo Rock1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    
+
+
+    <div class="container-md">
+        <div id="osacred-menu" style="display:none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/osogbo grove1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/osogbo grove2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/osogbo grove3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/osogbo grove1.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Osun Osogbo Sacred Park</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Osogbo Osun State</p>
+               x
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/osogbo grove5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/osogbo grove3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/osogbo grove2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="national-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/national1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/national3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/national2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/national6.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Osun Osogbo Sacred Park</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Osogbo Osun State</p>
+               
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/national4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/national1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/national2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    
+   
+    
+    <div class="container-md">
+        <div id="owu-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/owu waterfall.jpg" alt="" class=" img-fluid w-100" style="border-radius: 50%;">
+                    <img src="images/owu waterfall2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/owu waterfall3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/owu waterfall.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Owu waterfalls</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Owa Kajola Kwara state</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/owu waterfall3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                    <img src="images/owu waterfall6.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/owu waterfall.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="tankari-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/tankari1.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/tankari2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/tankari3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/tankari3.jpg" alt="" class="img-fluid rounded border mt-5 h-50" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Osun Osogbo Sacred Park</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Osogbo Osun State</p>
+               
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/tankari4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/tankari5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/tankari1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="Erin-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Erin.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Erin1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Erin2.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Erin3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Erin Ijesha Waterfalls</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Erin Osun state</p>
+               
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Erin4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Erin5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Erin3.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="awhum-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Awhum.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Awhum1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Awhum2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Awhum4.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Awhum Cave</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Awhum Enugu State</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Awhum4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Awhum5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Awhum3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="ikogosi-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Ikogosi.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Ikogosi1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Ikogosi2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Ikogosi.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Ikogosi Warm Spring</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Ikogosi, Ekiti State</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Ikogosi4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Ikogosi5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Ikogosi3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="tarkwa-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Tarkwa.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Tarkwa1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Tarkwa2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Tarkwa3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Tarkwa Bay Beach</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Lagos, Lagos State</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Tarkwa4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Tarkwa5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Tarwa1.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="bar-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Bar.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Bar1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Bar2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Bar3.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Bar Beach</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Lagos, Lagos State</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Bar4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Bar5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Bar3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="calabar-menu" style="display: none;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Calabar.jpg" alt="" class=" img-fluid w-75" style="border-radius: 50%;">
+                    <img src="images/Calabar1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Calabar2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Calabar4.jpg" alt="" class="img-fluid rounded border mt-5" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Calabar Slave Park</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Calabar, CrossRiver state</p>
+                
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Calabar4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Calabar5.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Calabar3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+
+
+    <div class="container-md">
+        <div id="gurara-menu" style="display:none ;">
+            <div class="col d-flex mt-5" style="justify-items: center; gap: 20px;">
+                <div class="row mt-5" style="display: block;">
+                    <img src="images/Gurara.jpg" alt="" class=" img-fluid w-75 h-25" style="border-radius: 50%;">
+                    <img src="images/Gurara1.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Gurara2.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                <div class="row">
+                    <img src="images/Gurara3.jpg" alt="" class="img-fluid rounded border mt-5 h-50" style="width: 1000px;">
+                     <div class="col mt-4">
+                        <p style="font-size: 15px;" class="text-md">Gurara Waterfall</p>
+                        <p class="text-primary text-md" style="font-size: 15px;"> Locations: Gurara, Niger state</p>
+
+              </div>
+                </div>
+                <div class="row mt-5 mx-5" style="display: block; gap: 20px;">
+                    <img src="images/Gurara4.jpg" alt="" class=" img-fluid w-75"  style="border-radius: 50%;">
+                    <img src="images/Gurara5.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                    <img src="images/Gurara3.jpg" alt="" class=" img-fluid w-75 h-25"  style="border-radius: 50%;">
+                </div>
+                
+              </div>
+        </div>
+       
+    </div>
+    <div class="container-md mt-5">
+        <div style="padding: 3rem;  margin: auto; ">
+            <p class=" " style="text-align: center; font-size: 20px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Welcome to Trip Zone,</p>
+            <p class="text-light" style=" word-wrap: break-word; font-size: 17px; font-style: oblique; font-family: sans-serif;">Trip Zone is a new website that is here to guide or suggest best and importance tourist,Fun,Vacations centers/Places for you, with the help of Trip Zone, you get educates about new environment, where you can spead quality time with Family, Friends and Love ones
+                All you need to do, is to select the place of yours at our Tourist Center/places button to see all available places just for you, your happinest and fun is our concern
+            </p>
+            
+        </div>
+    </div>
+    <hr class="bg-dark w-100 border border-dark border-2 h-100">
+    <footer class="table-footer">
+        <div class="container-md">
+            <div class="row d d-flex text-align-center text-light">
+              <ol class="col">
+                <p>Our Offers</p>
+                <li style="list-style-type: none;" class="footer-item">Exclusive Offers</li>
+                <li style="list-style-type: none;" class="footer-item">Best places</li>
+                <li style="list-style-type: none;" class="footer-item">importance places close to you</li>
+              </ol>
+              <ol class="col">
+                <p>Our Intructors</p>
+                <li style="list-style-type: none;" class="footer-item">Dr Godwin Chukwu</li>
+                <li style="list-style-type: none;" class="footer-item">Prof Emmauel Paul</li>
+                <li style="list-style-type: none;" class="footer-item">Dr Ogbo OPO</li>
+              </ol>
+              <ol class="col">
+                <p>Contact Us</p>
+                <li style="list-style-type: none;" class="footer-item">www.tripZone.org.com</li>
+                <li style="list-style-type: none;" class="footer-item">TripZone100@gmail.com</li>
+                <li style="list-style-type: none;" class="footer-item">call +234 90 445 004 00</li>
+              </ol>
+            </div>
+        </div>
+    </footer>
+    
+
+   <script src="index.js"></script>
+   <script src="script.js"></script>
+   <script src="kainji.js"></script>
+   <script src="obudo.js"></script>
+   <script src="olumo.js"></script>
+   <script src="osogbo.js"></script>
+   <script src="national.js"></script>
+   <script src="owu.js"></script>
+   <script src="tankari.js"></script>
+   <script src="Erin.js"></script>
+   <script src="awhum.js"></script>
+   <script src="ikogosi.js"></script>
+   <script src="tarkwa.js"></script>
+   <script src="bar.js"></script>
+   <script src="calabar.js"></script>
+   <script src="gurara.js"></script>
+   <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>--->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>    
+</body>
+</html>
